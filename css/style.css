@@ -1,0 +1,32 @@
+body {
+   margin: 0;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+   margin: 0;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.file{
+      margin-bottom: 20px;
+      border: 1px solid #dddddd;
+      border-collapse: collapse;
+}
+
+
+.file td {
+   border: 1px solid #dddddd;
+   padding: 20px;
+}
+
+
+.link{
+color: black;
+   text-decoration:none;
+}
+
