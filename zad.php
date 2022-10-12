@@ -28,7 +28,6 @@
          $file = $redactor->getAll();
          foreach ($file as $item) { ?>
             <tr>
-               <td><? print_r($item)  ?></td>
                <td>
                   <form action="change/name.php" method="post">
                      <? echo $item['name']; ?>
