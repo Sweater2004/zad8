@@ -28,24 +28,33 @@
          $file = $redactor->getAll();
          foreach ($file as $item) { ?>
             <tr>
-               <td><?= $item['name'] ?></td>
+               <td><? print_r($item)  ?></td>
+               <td>
+                  <form action="change/name.php" method="post">
+                     <? echo $item['name']; ?>
+                     <input class="name_file" type="text" name="file_path">
+                     <button type="submit" value=<?= $item['path'] ?> name="file">
+                        изменить имя
+                     </button>
+                  </form>
+               </td>
                <td>
                   <form action="change/delete.php" method="post">
-                     <button class="btn1" type="submit" name="file_path" value=<?= $item['path'] ?>>
+                     <button type="submit" name="file_path" value=<?= $item['path'] ?>>
                         удалить
                      </button>
                   </form>
                </td>
                <td>
                   <form action="change/download.php" method="post">
-                     <button class="btn2" type="submit" name="file_path" value=<?= $item['path'] ?>>
+                     <button type="submit" name="file_path" value=<?= $item['path'] ?>>
                         скачать
                      </button>
                   </form>
                </td>
                <td>
-                  <button class="btn3" type="submit" name="file_path" value=<?= $item['path'] ?>>
-                     <a class="link" href="<? print_r($item['docviewer']) ?>">смотреть</a>
+                  <button type="submit" name="file_path" value=<?= $item['path'] ?>>
+                     <a href="<? print_r($item['docviewer']) ?>">смотреть</a>
                   </button>
                </td>
             </tr>
